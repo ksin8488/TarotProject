@@ -16,6 +16,10 @@ import java.awt.event.ActionListener;
 public class TarotPanel extends JPanel
 {
 	private TarotController appController;
+	private JButton tarotButton;
+	private JTextArea tarotArea; //Display Tarot Card information
+	private SpringLayout appLayout;
+	private JLabel infoLabel; 	//OTHER WAY to display the Tarot Card information
 	
 	
 	/**
@@ -27,7 +31,15 @@ public class TarotPanel extends JPanel
 		super();
 		this.appController = appController;
 		
-		//Initalize GUI data members
+		//Initialize GUI data members
+		tarotButton = new JButton("Draw Cards");
+		tarotArea = new JTextArea(10, 25);	//CAN CHANGE DIMENSIONS
+		appLayout = new SpringLayout();
+		
+		//Method Calls
+		setupPanel();
+		setupLayout();
+		setupListeners();
 	}
 	
 	/**
@@ -35,7 +47,11 @@ public class TarotPanel extends JPanel
 	 */
 	private void setupPanel()
 	{
-		
+		this.setBackground(Color.BLUE);
+		this.setLayout(appLayout);
+		this.add(tarotButton);
+		tarotArea.setEnabled(false);		//makes it so user can't enable it
+		tarotArea.setEditable(false);	//makes it so user can't type into it
 	}
 	
 	/**
