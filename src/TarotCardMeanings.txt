@@ -1,0 +1,304 @@
+Fool upright
+Beginnings, innocence, spontaneity, a free spirit
+Fool reversed
+Naivety, foolishness, recklessness, risk-taking
+Magician upright
+Power, skill, concentration, action, resourcefulness
+Magician reversed
+Manipulation, poor planning, latent talents
+HighPriestess upright
+Intuition, Higher powers, mystery, subconscious mind
+HighPriestess reversed
+Hidden agendas, need to listen to inner voice
+Empress upright
+Fertility, femininity, beauty, nature, abundance
+Empress reversed
+Creative block, dependence on others
+Emperor upright
+Authority, father-figure, structure, solid foundation
+Emperor reversed
+Domination, excessive control, rigidity, inflexibility
+Hierophant upright
+Religion, group identification, conformity, tradition, beliefs
+Hierophant reversed
+Restriction, challenging the status quo
+Lovers upright
+Love, union, relationships, values alignment, choices
+Lovers reversed
+Disharmony, imbalance, misalignment of values
+Chariot upright
+Control, will power, victory, assertion, determination
+Chariot reversed
+Lack of control and direction, aggression
+Strength upright
+Strength, courage, patience, control, compassion
+Strength reversed
+Weakness, self-doubt, lack of self-discipline
+Hermit upright
+Soul-searching, introspection, being alone, inner guidance
+Hermit reversed
+Isolation, loneliness, withdrawal
+WheelOfFortune upright
+Good luck, karma, life cycles, destiny, a turning point
+WheelOfFortune reversed
+Bad luck, negative external forces, out of control
+Justice upright
+Justice, fairness, truth, cause and effect, law
+Justice reversed
+Unfairness, lack of accountability, dishonesty
+Hangman upright
+Suspension, restriction, letting go, sacrifice
+Hangman reversed
+Martyrdom, indecision, delay
+Death upright
+Endings, beginnings, change, transformation, transition
+Death reversed
+Resistance to change, unable to move on
+Temperance upright
+Balance, moderation, patience, purpose, meaning
+Temperance reversed
+Imbalance, excess, lack of long-term vision
+Devil upright
+Bondage, addiction, sexuality, materialism
+Devil reversed
+Detachment, breaking free, power reclaimed
+Tower upright
+Disaster, upheaval, sudden change, revelation
+Tower reversed
+Avoidance of disaster, fear of change
+Star upright
+Hope, spirituality, renewal, inspiration, serenity
+Star reversed
+Lack of faith, despair, discouragement
+Moon upright
+Illusion, fear, anxiety, insecurity, subconscious
+Moon reversed
+Release of fear, unhappiness, confusion
+Sun upright
+Fun, warmth, success, positivity, vitality
+Sun reversed
+Temporary depression, lack of success
+Judgement upright
+Judgement, rebirth, inner calling, absolution
+Judgement reversed
+Self-doubt, refusal of self-examination
+AceOfCups upright
+Love, compassion, creativity, overwhelming emotion
+AceOfCups reversed
+Blocked or repressed emotions
+TwoOfCups upright
+Unified love, partnership, attraction, relationships
+TwoOfCups reversed
+Break-up, imbalance in a relationship, lack of harmony
+ThreeOfCups upright
+Celebration, friendship, creativity, community
+ThreeOfCups reversed
+An affair, “three’s a crowd”, stifled creativity
+FourOfCups upright
+Meditation, contemplation, apathy, re-evaluation
+FourOfCups reversed
+Boredom, missed opportunity, being aloof
+FiveOfCups upright
+Loss, regret, disappointment, despair, bereavement
+FiveOfCups reversed
+Moving on, acceptance, forgiveness
+SixOfCups upright
+Reunion, nostalgia, childhood memories, innocence
+SixOfCups reversed
+Stuck in the past, naivety, unrealistic
+SevenOfCups upright
+Fantasy, illusion, wishful thinking, choices, imagination
+SevenOfCups reversed
+Temptation, illusion, diversionary tactics
+EightOfCups upright
+Escapism, disappointment, abandonment, withdrawal
+EightOfCups
+Hopelessness, aimless drifting, walking away
+NineOfCups upright
+Wishes fulfilled, comfort, happiness, satisfaction
+NineOfCups reversed
+Greed, dissatisfaction, materialism
+TenOfCups upright
+Harmony, marriage, happiness, alignment
+TenOfCups reversed
+Misalignment of values, broken home or marriage
+PageOfCups upright
+A messenger, creative beginnings, synchronicity
+PageOfCups reversed
+Emotional immaturity, creative block
+KnightsOfCups upright
+Romance, charm, ‘Knight in shining armor’, imagination
+KnightOfCups reversed
+Unrealistic, jealousy, moodiness
+QueenOfCups upright
+Emotional security, calm, intuitive, compassionate
+QueenOfCups reversed
+Emotional insecurity, co-dependency
+KingOfCups upright
+Emotional balance and control, generosity
+KingOfCups reversed
+Emotional manipulation, moodiness, volatility
+AceOfPentacles upright
+Manifestation, new financial opportunity, prosperity
+AceOfPentacles reversed
+Lost opportunity, lack of planning and foresight
+TwoOfPentacles upright
+Balance, adaptability, time management, prioritization
+TwoOfPentacles reversed
+Disorganization, financial disarray
+ThreeOfPentacles upright
+Teamwork, initial fulfillment, collaboration, learning
+ThreeOfPentacles reversed
+Lack of teamwork, disregard for skills
+FourOfPentacles upright
+Control, stability, security, possession, conservatism
+FourOfPentacles reversed
+Greed, materialism, self-protection
+FiveOfPentacles upright
+Isolation, insecurity, worry, financial loss, poverty
+FiveOfPentacles reversed
+Recovery from financial loss, spiritual poverty
+SixOfPentacles upright
+Generosity, charity, giving, prosperity, sharing wealth
+SixOfPentacles reversed
+Debt, selfishness, one-sided charity
+SevenOfPentacles upright
+Vision, perseverance, profit, reward, investment
+SevenOfPentacles reversed
+Lack of long-term vision, limited success or reward
+EightOfPentacles upright
+Apprenticeship, education, quality, engagement
+EightOfPentacles reversed
+Perfectionism, lacking ambition or focus
+NineOfPentacles upright
+Gratitude, luxury, self-sufficiency, culmination
+NineOfPentacles reversed
+Over-investment in work, financial setbacks
+TenOfPentacles upright
+Wealth, inheritance, family, establishment, retirement
+TenOfPentacles reversed
+Financial failure, loneliness, loss
+PageOfPentacles upright
+Manifestation, financial opportunity, new job
+PageOfPentacles reversed
+Lack of progress and planning, short-term focus
+KnightOfPentacles upright
+Efficiency, routine, conservatism, methodical
+KnightOfPentacles reversed
+Laziness, boredom, feeling ‘stuck’
+QueenOfPentacles upright
+Practical, homely, motherly, down-to-earth, security
+QueenOfPentacles reversed
+Imbalance in work/ family commitments
+KingOfPentacles upright
+Security, control, power, discipline, abundance
+KingOfPentacles reversed
+Authoritative, domineering, controlling
+AceOfSwords upright
+Raw power, victory, break-throughs, mental clarity
+AceOfSwords reversed
+Confusion, chaos, lack of clarity
+TwoOfSwords upright
+Indecision, choices, truce, stalemate, blocked emotions
+TwoOfSwords reversed
+Indecision, confusion, information overload
+ThreeOfSwords upright
+Painful separation, sorrow heartbreak, grief, rejection
+ThreeOfSwords reversed
+Releasing pain, optimism, forgiveness
+FourOfSwords upright
+Contemplation, recuperation, passivity, relaxation, rest
+FourOfSwords reversed
+Restlessness, burn-out, lack of progress
+FiveOfSwords upright
+Conflict, tension, loss, defeat, win at all costs, betrayal
+FiveOfSwords reversed
+Open to change, past resentment
+SixOfSwords upright
+Regretful but necessary transition, rite of passage
+SixOfSwords reversed
+Cannot move on, carrying baggage
+SevenOfSwords upright
+Betrayal, deception, getting away with something, stealth
+SevenOfSwords reversed
+Mental challenges, breaking free
+EightOfSwords upright
+Isolation, self-imposed restriction, imprisonment
+EightOfSwords reversed
+Open to new perspectives, release
+NineOfSwords upright
+Depression, nightmares, intense anxiety, despair
+NineOfSwords reversed
+Hopelessness, severe depression, torment
+PageOfSwords upright
+Talkative, curious, mentally restless, energetic
+PageOfSwords reversed
+All talk and no action, haste, undelivered promises
+KnightOfSwords upright
+Opinionated, hasty, action-oriented, communicative
+KnightOfSwords reversed
+Scattered thought, disregard for consequences
+QueenOfSwords upright
+Quick thinker, organized, perceptive, independent
+QueenOfSwords reversed
+Overly-emotional, bratty, cold-hearted
+KingOfSwords upright
+Clear thinking, intellectual power, authority, truth
+KingOfSwords reversed
+Manipulative, tyrannical, abusive
+AceOfWands upright
+Inspiration, power, creation, beginnings, potential
+AceOfWands reversed
+Delays, lack of motivation, weighed down
+TwoOfWands upright
+Future planning, progress, decisions, discovery
+TwoOfWands reversed
+Fear of unknown, lack of planning
+ThreeOfWands upright
+Preparation, foresight, enterprise, expansion
+ThreeOfWands reversed
+Lack of foresight, delays, obstacles to long-term goals
+FourOfWands upright
+Celebration, harmony, marriage, home, community
+FourOfWands reversed
+Breakdown in communication, transition
+FiveOfWands upright
+Disagreement, competition, strife, tension, conflict
+FiveOfWands reversed
+Conflict avoidance, increased focus on goals
+SixOfWands upright
+Public recognition, victory, progress, self-confidence
+SixOfWands reversed
+Egotism, disrepute, lack of confidence, fall from grace
+SevenOfWands upright
+Challenge, competition, perseverance
+SevenOfWands reversed
+Giving up, overwhelmed, overly protective
+EightOfWands upright
+Speed, action, air travel, movement, swift change
+EightOfWands reversed
+Delays, frustration, holding off
+NineOfWands upright
+Courage, persistence, test of faith, resilience
+NineOfWands reversed
+On edge, defensive, hesitant, paranoia
+TenOfWands upright
+Burden, responsibility, hard work, stress, achievement
+TenOfWands reversed
+Taking on too much, avoiding responsibility
+PageOfWands upright
+Enthusiasm, exploration, discovery, free spirit
+PageOfWands reversed
+Setbacks to new ideas, pessimism, lack of direction
+KnightOfWands upright
+Energy, passion, lust, action, adventure, impulsiveness
+KnightOfWands reversed
+Haste, scattered energy, delays, frustration
+QueenOfWands upright
+Exuberance, warmth, vibrancy, determination
+QueenOfWands reversed
+Shrinking violet, aggressive, demanding
+KingOfWands upright
+Natural-born leader, vision, entrepreneur, honor
+KingOfWands reversed
+Impulsiveness, haste, ruthless, high expectations
