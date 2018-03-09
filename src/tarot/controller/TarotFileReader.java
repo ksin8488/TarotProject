@@ -28,26 +28,4 @@ public class TarotFileReader
 		}
 		return contents;
 	}
-	
-	//RANDOMIZE THIS!!!
-	public static String readCardType(TarotController app, String filename)
-	{
-		String cardType = "";
-		String path = "TarotCardMeanings.txt";
-		try
-		{
-			Scanner fileScanner = new Scanner(new File(path));
-			while(fileScanner.hasNextLine())
-			{
-				String row = fileScanner.nextLine();
-				cardType += row + "/n";
-			}
-			fileScanner.close();
-		}
-		catch(FileNotFoundException error)
-		{
-			System.out.println("There was an error:" + error.getMessage());
-		}
-		return cardType;
-	}
 }

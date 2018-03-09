@@ -2,6 +2,7 @@ package tarot.controller;
 
 import tarot.view.TarotFrame;
 import tarot.view.PopupDisplay;
+import tarot.model.Tarot;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -21,7 +22,7 @@ public class TarotController
 	
 	public void start()
 	{
-		
+		String fileContents = TarotFileReader.readFromFile(this, "TarotCardMeanings.txt");
 	}
 	
 	public void handleErrors(Exception error)
