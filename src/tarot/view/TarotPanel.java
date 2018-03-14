@@ -1,20 +1,26 @@
 package tarot.view;
 
 import javax.swing.JPanel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import javax.swing.JLabel;
 
 import tarot.controller.TarotController;
+import tarot.model.TarotCards;
+import tarot.model.Card;
 import java.awt.Color;
 import javax.swing.SpringLayout;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TarotPanel extends JPanel
 {
+	private List<Card> cardInfo;
 	private TarotController appController;
 	private JButton tarotButton;
 	private JTextArea tarotArea; //Display Tarot Card information
@@ -30,6 +36,7 @@ public class TarotPanel extends JPanel
 	{
 		super();
 		this.appController = appController;
+		this.cardInfo = new ArrayList<Card>();
 		
 		//Initialize GUI data members
 		tarotButton = new JButton("Draw Cards");
@@ -37,9 +44,29 @@ public class TarotPanel extends JPanel
 		appLayout = new SpringLayout();
 		
 		//Method Calls
+		updateImage();
 		setupPanel();
 		setupLayout();
 		setupListeners();
+	}
+	
+	private void updateImage()
+	{
+		//ADD THIS CODE BELOW TO PANEL LATER!!!
+		String path = "/tarot/view/images/";
+		String defaultName = "Death";
+		String name = cardInfo.getCardName();
+		String extension = ".png";
+		ImageIcon cardImage;	//import image icon
+		try
+		{
+			cardImage = new ImageIcon(getClass().getResource(path + name + extension));
+		}
+		catch (NullPointerException missingImageFile)
+		{
+			cardImage = new ImageIcon(getClass().getResource(path + defaultName + extension));
+			System.out.println("ERROR. Image File Not Found");
+		}
 	}
 	
 	/**

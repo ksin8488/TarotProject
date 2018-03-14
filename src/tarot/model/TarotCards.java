@@ -6,6 +6,9 @@ import tarot.model.Card;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import javax.swing.ImageIcon;
+
 import java.util.Random;
 import java.awt.*;
  
@@ -53,10 +56,12 @@ public class TarotCards
 		}
 	}
 	
-	public void getCardImage()
+	public void cardImageInfo()
 	{
-		String fileText = TarotFileReader.readFromFile(appController, "TarotCardMeangings.txt");
-		String cardFullName = fileText.split(" ");
+		String [] cardFullName = cardInfo.get(0).getCardType().split(" ");
+		String cardName = cardFullName[0];
+		String cardOrientation = cardFullName[1];
+		
 	}
  }
 
