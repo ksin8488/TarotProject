@@ -8,12 +8,18 @@ public class Card
 	private int cardNumber;
 	private String cardType;
 	private String cardDescription;
+	private String [] cardFullName;
+	private String cardName;
+	private String cardOrientation;
 	
-	public Card(int cardNumber, String cardType, String cardDescription)
+	public Card(int cardNumber, String cardType, String cardDescription, String [] cardFullName, String cardName, String cardOrientation)
 	{
 		this.cardNumber = cardNumber;
 		this.cardType = cardType;
 		this.cardDescription = cardDescription;
+		this.cardFullName = cardFullName;
+		this.cardName = cardName;
+		this.cardOrientation = cardOrientation;
 	}
 	
 	public int getCardNumber()
@@ -29,5 +35,20 @@ public class Card
 	public String getCardDescription()
 	{
 		return cardDescription;
+	}
+	
+	public String [] getCardFullName()
+	{
+		return cardFullName;
+	}
+	
+	public String getCardName()
+	{
+		return cardName;
+	}
+	
+	public String getCardOreintation()
+	{
+		return cardOrientation;
 	}
 }

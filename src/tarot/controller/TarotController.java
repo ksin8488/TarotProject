@@ -37,6 +37,5 @@ public class TarotController
 	{
 		myCards.fillDeck();
 		myCards.randomSelector();
-		myCards.getCardImage();
 	}
 }

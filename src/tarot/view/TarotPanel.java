@@ -52,10 +52,10 @@ public class TarotPanel extends JPanel
 	
 	private void updateImage()
 	{
-		//ADD THIS CODE BELOW TO PANEL LATER!!!
+		
 		String path = "/tarot/view/images/";
 		String defaultName = "Death";
-		String name = cardInfo.getCardName();
+		String name = cardInfo.get(0).getCardName();
 		String extension = ".png";
 		ImageIcon cardImage;	//import image icon
 		try

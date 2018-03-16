@@ -25,7 +25,7 @@ public class TarotCards
 	{
 		this.appController = appController;
 		this.deck = new ArrayList<String>();
-		this.cardInfo = new ArrayList<Card>();
+		//this.cardInfo = new ArrayList<Card>();
 	}
 	
 	public void fillDeck()
@@ -52,16 +52,13 @@ public class TarotCards
 			cardIndex = number;
 			cardType = deck.get(number);
 			cardDescription = deck.get(number + 1);
-			cardInfo.add(new Card(number, cardType, cardDescription));
+			String [] cardFullName = cardType.split(" ");
+			String cardName = cardFullName[0];
+			String cardOrientation = cardFullName[1];
+			cardInfo.add(new Card(number, cardType, cardDescription, cardFullName, cardName, cardOrientation));
+			
 		}
 	}
-	
-	public void cardImageInfo()
-	{
-		String [] cardFullName = cardInfo.get(0).getCardType().split(" ");
-		String cardName = cardFullName[0];
-		String cardOrientation = cardFullName[1];
-		
-	}
+
  }
 
