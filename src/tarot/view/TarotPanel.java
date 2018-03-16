@@ -20,10 +20,11 @@ import java.util.List;
 
 public class TarotPanel extends JPanel
 {
-	private List<Card> cardInfo;
 	private TarotController appController;
 	private JButton tarotButton;
-	private JTextArea tarotArea; //Display Tarot Card information
+	private JTextArea cardOneDescription; //Display Tarot Card information
+	private JTextArea cardTwoDescription;
+	private JTextArea cardThreeDescription;
 	private JLabel cardOne;
 	private JLabel cardTwo;
 	private JLabel cardThree;
@@ -39,15 +40,22 @@ public class TarotPanel extends JPanel
 	{
 		super();
 		this.appController = appController;
-		this.cardInfo = new ArrayList<Card>();
 		
 		//Initialize GUI data members
 		tarotButton = new JButton("Draw Cards");
-		tarotArea = new JTextArea(10, 10);	//CAN CHANGE DIMENSIONS
+		cardOneDescription = new JTextArea(10, 10);	//CAN CHANGE DIMENSIONS
+		cardTwoDescription = new JTextArea(10, 10);
+		cardThreeDescription = new JTextArea(10, 10);
 		cardOne = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/Death.png")), JLabel.CENTER);
 		cardTwo = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/Death.png")), JLabel.CENTER);
 		cardThree = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/Death.png")), JLabel.CENTER);
 		appLayout = new SpringLayout();
+		appLayout.putConstraint(SpringLayout.WEST, cardOneDescription, 10, SpringLayout.WEST, this);
+		appLayout.putConstraint(SpringLayout.NORTH, cardThreeDescription, 0, SpringLayout.NORTH, cardOneDescription);
+		appLayout.putConstraint(SpringLayout.WEST, cardThreeDescription, 22, SpringLayout.EAST, cardTwoDescription);
+		appLayout.putConstraint(SpringLayout.SOUTH, cardOneDescription, -10, SpringLayout.SOUTH, this);
+		appLayout.putConstraint(SpringLayout.NORTH, cardTwoDescription, 0, SpringLayout.NORTH, cardOneDescription);
+		appLayout.putConstraint(SpringLayout.WEST, cardTwoDescription, 35, SpringLayout.EAST, cardOneDescription);
 		
 		//Method Calls
 		setupPanel();
@@ -61,7 +69,7 @@ public class TarotPanel extends JPanel
 		
 		String path = "/tarot/view/images/";
 		String defaultName = "Death";
-		String nameOne = cardInfo.get(0).getCardName();
+		String nameOne = appController.getMyCards().getCardInfo().get(0).getCardName();
 		String extension = ".png";
 		ImageIcon cardImage;	//import image icon
 		try
@@ -75,7 +83,7 @@ public class TarotPanel extends JPanel
 		}
 		cardOne.setIcon(cardImage);
 		
-		String nameTwo = cardInfo.get(1).getCardName();
+		String nameTwo = appController.getMyCards().getCardInfo().get(1).getCardName();
 		try
 		{
 			cardImage = new ImageIcon(getClass().getResource(path + nameTwo + extension));
@@ -87,7 +95,7 @@ public class TarotPanel extends JPanel
 		}
 		cardTwo.setIcon(cardImage);
 		
-		String nameThree = cardInfo.get(2).getCardName();
+		String nameThree = appController.getMyCards().getCardInfo().get(2).getCardName();
 		try
 		{
 			cardImage = new ImageIcon(getClass().getResource(path + nameThree + extension));
@@ -108,12 +116,19 @@ public class TarotPanel extends JPanel
 		this.setBackground(Color.BLUE);
 		this.setLayout(appLayout);
 		this.add(tarotButton);
-		this.add(tarotArea);
+		this.add(cardOneDescription);
+		this.add(cardTwoDescription);
+		this.add(cardThreeDescription);
 		this.add(cardOne);
 		this.add(cardTwo);
 		this.add(cardThree);
-		tarotArea.setEnabled(false);		//makes it so user can't enable it
-		tarotArea.setEditable(false);	//makes it so user can't type into it
+		
+		cardOneDescription.setEnabled(false);		//makes it so user can't enable it
+		cardOneDescription.setEditable(false);	//makes it so user can't type into it
+		cardTwoDescription.setEnabled(false);
+		cardTwoDescription.setEditable(false);
+		cardThreeDescription.setEnabled(false);
+		cardThreeDescription.setEditable(false);
 	}
 	
 	/**
@@ -121,7 +136,7 @@ public class TarotPanel extends JPanel
 	 */
 	private void setupLayout()
 	{
-		appLayout.putConstraint(SpringLayout.SOUTH, tarotArea, 0, SpringLayout.SOUTH, this);
+		
 	}
 	
 	/**

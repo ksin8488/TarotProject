@@ -59,6 +59,12 @@ public class TarotCards
 			
 		}
 	}
+	
+	//Getter to return the cardInfo array
+	public List<Card> getCardInfo()
+	{
+		return cardInfo;
+	}
 
  }
 
