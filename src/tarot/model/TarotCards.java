@@ -12,7 +12,6 @@ import javax.swing.ImageIcon;
 import java.util.Random;
 import java.awt.*;
  
-//import java.util.HashMap;
 
 public class TarotCards
 {
@@ -25,7 +24,7 @@ public class TarotCards
 	{
 		this.appController = appController;
 		this.deck = new ArrayList<String>();
-		//this.cardInfo = new ArrayList<Card>();
+	
 	}
 	
 	public void fillDeck()
@@ -44,7 +43,6 @@ public class TarotCards
 		int cardIndex = 999999;	//super large number so it's not null but also very strange
 		String cardType = "";
 		String cardDescription = "";
-		Random randomizer = new Random();
 		int number = (int)Math.random() * (0 - deck.size() + 1);
 		
 		if(((2 * number) + 1) % 2 == 1)	//if the random number is odd...
@@ -56,6 +54,8 @@ public class TarotCards
 			String cardName = cardFullName[0];
 			String cardOrientation = cardFullName[1];
 			cardInfo.add(new Card(number, cardType, cardDescription, cardFullName, cardName, cardOrientation));
+			deck.remove(number);
+			deck.remove(number + 1);
 			
 		}
 	}

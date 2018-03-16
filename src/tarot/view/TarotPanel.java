@@ -24,6 +24,9 @@ public class TarotPanel extends JPanel
 	private TarotController appController;
 	private JButton tarotButton;
 	private JTextArea tarotArea; //Display Tarot Card information
+	private JLabel cardOne;
+	private JLabel cardTwo;
+	private JLabel cardThree;
 	private SpringLayout appLayout;
 	private JLabel infoLabel; 	//OTHER WAY to display the Tarot Card information
 	
@@ -40,33 +43,61 @@ public class TarotPanel extends JPanel
 		
 		//Initialize GUI data members
 		tarotButton = new JButton("Draw Cards");
-		tarotArea = new JTextArea(10, 25);	//CAN CHANGE DIMENSIONS
+		tarotArea = new JTextArea(10, 10);	//CAN CHANGE DIMENSIONS
+		cardOne = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/Death.png")), JLabel.CENTER);
+		cardTwo = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/Death.png")), JLabel.CENTER);
+		cardThree = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/Death.png")), JLabel.CENTER);
 		appLayout = new SpringLayout();
 		
 		//Method Calls
-		updateImage();
 		setupPanel();
 		setupLayout();
+		updateImages();
 		setupListeners();
 	}
 	
-	private void updateImage()
+	private void updateImages()
 	{
 		
 		String path = "/tarot/view/images/";
 		String defaultName = "Death";
-		String name = cardInfo.get(0).getCardName();
+		String nameOne = cardInfo.get(0).getCardName();
 		String extension = ".png";
 		ImageIcon cardImage;	//import image icon
 		try
 		{
-			cardImage = new ImageIcon(getClass().getResource(path + name + extension));
+			cardImage = new ImageIcon(getClass().getResource(path + nameOne + extension));
 		}
 		catch (NullPointerException missingImageFile)
 		{
 			cardImage = new ImageIcon(getClass().getResource(path + defaultName + extension));
 			System.out.println("ERROR. Image File Not Found");
 		}
+		cardOne.setIcon(cardImage);
+		
+		String nameTwo = cardInfo.get(1).getCardName();
+		try
+		{
+			cardImage = new ImageIcon(getClass().getResource(path + nameTwo + extension));
+		}
+		catch (NullPointerException missingImageFile)
+		{
+			cardImage = new ImageIcon(getClass().getResource(path + defaultName + extension));
+			System.out.println("ERROR. Image File Not Found");
+		}
+		cardTwo.setIcon(cardImage);
+		
+		String nameThree = cardInfo.get(2).getCardName();
+		try
+		{
+			cardImage = new ImageIcon(getClass().getResource(path + nameThree + extension));
+		}
+		catch (NullPointerException missingImageFile)
+		{
+			cardImage = new ImageIcon(getClass().getResource(path + defaultName + extension));
+			System.out.println("ERROR. Image File Not Found");
+		}
+		cardThree.setIcon(cardImage);
 	}
 	
 	/**
@@ -77,6 +108,10 @@ public class TarotPanel extends JPanel
 		this.setBackground(Color.BLUE);
 		this.setLayout(appLayout);
 		this.add(tarotButton);
+		this.add(tarotArea);
+		this.add(cardOne);
+		this.add(cardTwo);
+		this.add(cardThree);
 		tarotArea.setEnabled(false);		//makes it so user can't enable it
 		tarotArea.setEditable(false);	//makes it so user can't type into it
 	}
@@ -86,7 +121,7 @@ public class TarotPanel extends JPanel
 	 */
 	private void setupLayout()
 	{
-		
+		appLayout.putConstraint(SpringLayout.SOUTH, tarotArea, 0, SpringLayout.SOUTH, this);
 	}
 	
 	/**

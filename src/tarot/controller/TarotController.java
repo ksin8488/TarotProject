@@ -37,5 +37,7 @@ public class TarotController
 	{
 		myCards.fillDeck();
 		myCards.randomSelector();
+		myCards.randomSelector();	//Gets the 2nd random card from the deck
+		myCards.randomSelector();	//Gets the 3rd random card from the deck
 	}
 }
