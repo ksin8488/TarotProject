@@ -18,12 +18,22 @@ public class TarotCards
 	private TarotController appController;
 	private List<String> deck;
 	private List<Card> cardInfo;
+	private int drawSize = 3;
 	
 	
 	public TarotCards(TarotController appController)
 	{
 		this.appController = appController;
 		this.deck = new ArrayList<String>();
+		this.cardInfo = new ArrayList<Card>();
+		
+		//Calling methods
+		fillDeck();
+		
+		for(int index = 0; index < drawSize; index++)
+		{
+			randomSelector();	//gets called 3 times to get 3 random cards
+		}
 	
 	}
 	
@@ -40,24 +50,34 @@ public class TarotCards
 	
 	public void randomSelector()	//MAY NOT HAVE A VOID TYPE IN THE FUTURE
 	{
-		int cardIndex = 999999;	//super large number so it's not null but also very strange
-		String cardType = "";
-		String cardDescription = "";
-		int number = (int)Math.random() * (0 - deck.size() + 1);
+		boolean lookingForCard = true;
+
 		
-		if(((2 * number) + 1) % 2 == 1)	//if the random number is odd...
+		while(lookingForCard)
 		{
-			cardIndex = number;
-			cardType = deck.get(number);
-			cardDescription = deck.get(number + 1);
-			String [] cardFullName = cardType.split(" ");
-			String cardName = cardFullName[0];
-			String cardOrientation = cardFullName[1];
-			cardInfo.add(new Card(number, cardType, cardDescription, cardFullName, cardName, cardOrientation));
-			deck.remove(number);
-			deck.remove(number + 1);
+			int cardIndex = 99999;	//super large number so it's not null but also very strange
+			String cardType = "";
+			String cardDescription = "";
+			//int number = (int)Math.random() * (0 - deck.size() + 1);
+			//Random generator = new Random(System.currentTimeMillis());
 			
+			int number = (int)Math.random() * (0 - deck.size() + 1);
+			
+			if(((2 * number) + 1) % 2 == 1)	//if the random number is odd...
+			{
+				cardIndex = number;
+				cardType = deck.get(number);
+				cardDescription = deck.get(number + 1);
+				String [] cardFullName = cardType.split(" ");
+				String cardName = cardFullName[0];
+				String cardOrientation = cardFullName[1];
+				cardInfo.add(new Card(number, cardType, cardDescription, cardFullName, cardName, cardOrientation));
+				deck.remove(number);
+				deck.remove(number + 1);
+				lookingForCard = false;
+			}
 		}
+
 	}
 	
 	//Getter to return the cardInfo array

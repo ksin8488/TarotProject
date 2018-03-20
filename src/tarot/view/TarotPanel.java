@@ -50,12 +50,7 @@ public class TarotPanel extends JPanel
 		cardTwo = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/Death.png")), JLabel.CENTER);
 		cardThree = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/Death.png")), JLabel.CENTER);
 		appLayout = new SpringLayout();
-		appLayout.putConstraint(SpringLayout.WEST, cardOneDescription, 10, SpringLayout.WEST, this);
-		appLayout.putConstraint(SpringLayout.NORTH, cardThreeDescription, 0, SpringLayout.NORTH, cardOneDescription);
-		appLayout.putConstraint(SpringLayout.WEST, cardThreeDescription, 22, SpringLayout.EAST, cardTwoDescription);
-		appLayout.putConstraint(SpringLayout.SOUTH, cardOneDescription, -10, SpringLayout.SOUTH, this);
-		appLayout.putConstraint(SpringLayout.NORTH, cardTwoDescription, 0, SpringLayout.NORTH, cardOneDescription);
-		appLayout.putConstraint(SpringLayout.WEST, cardTwoDescription, 35, SpringLayout.EAST, cardOneDescription);
+		
 		
 		//Method Calls
 		setupPanel();
@@ -136,7 +131,20 @@ public class TarotPanel extends JPanel
 	 */
 	private void setupLayout()
 	{
-		
+		appLayout.putConstraint(SpringLayout.EAST, cardOne, 0, SpringLayout.EAST, cardTwo);
+		appLayout.putConstraint(SpringLayout.EAST, cardTwo, 0, SpringLayout.EAST, cardThree);
+		appLayout.putConstraint(SpringLayout.EAST, cardThree, 0, SpringLayout.EAST, this);
+		appLayout.putConstraint(SpringLayout.NORTH, cardOneDescription, 163, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.SOUTH, cardOneDescription, -49, SpringLayout.SOUTH, this);
+		appLayout.putConstraint(SpringLayout.NORTH, cardTwoDescription, 0, SpringLayout.NORTH, cardOneDescription);
+		appLayout.putConstraint(SpringLayout.WEST, cardTwoDescription, 0, SpringLayout.WEST, tarotButton);
+		appLayout.putConstraint(SpringLayout.SOUTH, cardTwoDescription, -10, SpringLayout.NORTH, tarotButton);
+		appLayout.putConstraint(SpringLayout.NORTH, cardThreeDescription, 163, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.SOUTH, cardThreeDescription, -49, SpringLayout.SOUTH, this);
+		appLayout.putConstraint(SpringLayout.EAST, cardThreeDescription, -10, SpringLayout.EAST, this);
+		appLayout.putConstraint(SpringLayout.WEST, cardOneDescription, 10, SpringLayout.WEST, this);
+		appLayout.putConstraint(SpringLayout.EAST, tarotButton, -165, SpringLayout.EAST, this);
+		appLayout.putConstraint(SpringLayout.SOUTH, tarotButton, -10, SpringLayout.SOUTH, this);
 	}
 	
 	/**

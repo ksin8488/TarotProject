@@ -18,8 +18,8 @@ public class TarotController
 	public TarotController()
 	{
 		display = new PopupDisplay();
-		appFrame = new TarotFrame(this);
 		myCards = new TarotCards(this);
+		appFrame = new TarotFrame(this);
 	}
 	
 	public void start()
