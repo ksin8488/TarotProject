@@ -58,12 +58,12 @@ public class TarotCards
 			int cardIndex = 99999;	//super large number so it's not null but also very strange
 			String cardType = "";
 			String cardDescription = "";
-			//int number = (int)Math.random() * (0 - deck.size() + 1);
+
 			Random generator = new Random(System.currentTimeMillis());
 			
 			int number = generator.nextInt(deck.size() - 0) + 1;
 			
-			if(((2 * number) + 1) % 2 == 1)	//if the random number is odd...
+			if(number % 2 == 0)	//if the random number is even...
 			{
 				cardIndex = number;
 				cardType = deck.get(number);
@@ -72,8 +72,8 @@ public class TarotCards
 				String cardName = cardFullName[0];
 				String cardOrientation = cardFullName[1];
 				cardInfo.add(new Card(number, cardType, cardDescription, cardFullName, cardName, cardOrientation));
-				//deck.remove(number); FIX THIS
-				//deck.remove(number + 1); FIX THIS
+				//deck.remove(number);
+				//deck.remove(number + 1);
 				lookingForCard = false;
 			}
 		}
