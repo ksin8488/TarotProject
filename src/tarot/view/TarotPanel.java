@@ -21,7 +21,7 @@ import java.util.List;
 public class TarotPanel extends JPanel
 {
 	private TarotController appController;
-	private JButton tarotButton;
+	private JButton drawCardsButton;
 	private JTextArea cardOneDescription; //Display Tarot Card information
 	private JTextArea cardTwoDescription;
 	private JTextArea cardThreeDescription;
@@ -42,7 +42,7 @@ public class TarotPanel extends JPanel
 		this.appController = appController;
 		
 		//Initialize GUI data members
-		tarotButton = new JButton("Draw Cards");
+		drawCardsButton = new JButton("Draw Cards");
 		cardOneDescription = new JTextArea(10, 10);	//CAN CHANGE DIMENSIONS
 		cardTwoDescription = new JTextArea(10, 10);
 		cardThreeDescription = new JTextArea(10, 10);
@@ -56,6 +56,7 @@ public class TarotPanel extends JPanel
 		setupPanel();
 		setupLayout();
 		updateImages();
+		updateText();
 		setupListeners();
 	}
 	
@@ -103,6 +104,11 @@ public class TarotPanel extends JPanel
 		cardThree.setIcon(cardImage);
 	}
 	
+	private void updateText()
+	{
+		
+	}
+	
 	/**
 	 * Set's the data members and ensures users can't access certain fields
 	 */
@@ -110,7 +116,7 @@ public class TarotPanel extends JPanel
 	{
 		this.setBackground(Color.BLUE);
 		this.setLayout(appLayout);
-		this.add(tarotButton);
+		this.add(drawCardsButton);
 		this.add(cardOneDescription);
 		this.add(cardTwoDescription);
 		this.add(cardThreeDescription);
@@ -131,20 +137,7 @@ public class TarotPanel extends JPanel
 	 */
 	private void setupLayout()
 	{
-		appLayout.putConstraint(SpringLayout.EAST, cardOne, 0, SpringLayout.EAST, cardTwo);
-		appLayout.putConstraint(SpringLayout.EAST, cardTwo, 0, SpringLayout.EAST, cardThree);
-		appLayout.putConstraint(SpringLayout.EAST, cardThree, 0, SpringLayout.EAST, this);
-		appLayout.putConstraint(SpringLayout.NORTH, cardOneDescription, 163, SpringLayout.NORTH, this);
-		appLayout.putConstraint(SpringLayout.SOUTH, cardOneDescription, -49, SpringLayout.SOUTH, this);
-		appLayout.putConstraint(SpringLayout.NORTH, cardTwoDescription, 0, SpringLayout.NORTH, cardOneDescription);
-		appLayout.putConstraint(SpringLayout.WEST, cardTwoDescription, 0, SpringLayout.WEST, tarotButton);
-		appLayout.putConstraint(SpringLayout.SOUTH, cardTwoDescription, -10, SpringLayout.NORTH, tarotButton);
-		appLayout.putConstraint(SpringLayout.NORTH, cardThreeDescription, 163, SpringLayout.NORTH, this);
-		appLayout.putConstraint(SpringLayout.SOUTH, cardThreeDescription, -49, SpringLayout.SOUTH, this);
-		appLayout.putConstraint(SpringLayout.EAST, cardThreeDescription, -10, SpringLayout.EAST, this);
-		appLayout.putConstraint(SpringLayout.WEST, cardOneDescription, 10, SpringLayout.WEST, this);
-		appLayout.putConstraint(SpringLayout.EAST, tarotButton, -165, SpringLayout.EAST, this);
-		appLayout.putConstraint(SpringLayout.SOUTH, tarotButton, -10, SpringLayout.SOUTH, this);
+		
 	}
 	
 	/**
@@ -152,6 +145,14 @@ public class TarotPanel extends JPanel
 	 */
 	private void setupListeners()
 	{
-		
+		drawCardsButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				appController.createDeck();
+				updateImages();
+				updateText();
+			}
+		});
 	}
 }
