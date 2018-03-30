@@ -34,7 +34,7 @@ public class TarotFrame extends JFrame
 		this.setContentPane(appPanel);
 		this.setTitle("Tarot Card Program");
 		this.setResizable(false);
-		this.setSize(600, 600);	//CAN CHANGE IN THE FUTURE!!!
+		this.setSize(900, 750);	//CAN CHANGE IN THE FUTURE!!!
 		this.setVisible(true);
 	}
 }
