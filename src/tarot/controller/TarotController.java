@@ -35,7 +35,8 @@ public class TarotController
 	
 	public void createDeck()
 	{
-		myCards.fillDeck();
+		myCards.clearOldCards();	//clears out the old deck and CardInfo to create new ones
+		myCards.fillDeck();		//re-creates a brand new deck
 		myCards.randomSelector();
 		myCards.randomSelector();	//Gets the 2nd random card from the deck
 		myCards.randomSelector();	//Gets the 3rd random card from the deck
