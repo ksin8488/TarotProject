@@ -46,9 +46,9 @@ public class TarotPanel extends JPanel
 		cardOneDescription = new JTextArea(5, 50);	//CAN CHANGE DIMENSIONS
 		cardTwoDescription = new JTextArea(5, 50);
 		cardThreeDescription = new JTextArea(5, 50);
-		cardOne = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/Death.png")), JLabel.CENTER);
-		cardTwo = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/Death.png")), JLabel.CENTER);
-		cardThree = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/Death.png")), JLabel.CENTER);
+		cardOne = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/ImageNotFound.png")), JLabel.CENTER);
+		cardTwo = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/ImageNotFound.png")), JLabel.CENTER);
+		cardThree = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/ImageNotFound.png")), JLabel.CENTER);
 		appLayout = new SpringLayout();
 
 	
@@ -60,11 +60,14 @@ public class TarotPanel extends JPanel
 		setupListeners();
 	}
 	
+	/**
+	 * Takes the current information from CardInfo and adds them to the various Icons based on which card is which
+	 */
 	private void updateImages()
 	{
 		
 		String path = "/tarot/view/images/";
-		String defaultName = "Death";
+		String defaultName = "ImageNotFound";
 		String nameOne = appController.getMyCards().getCardInfo().get(0).getCardName();
 		String extension = ".png";
 		ImageIcon cardImage;	//import image icon
@@ -104,6 +107,9 @@ public class TarotPanel extends JPanel
 		cardThree.setIcon(cardImage);
 	}
 	
+	/**
+	 * Adds text from the current information in CardInfo to the textAreas
+	 */
 	private void updateText()
 	{
 		cardOneDescription.setText(appController.getMyCards().getCardInfo().get(0).getCardName() + 
@@ -120,7 +126,7 @@ public class TarotPanel extends JPanel
 	}
 	
 	/**
-	 * Set's the data members and ensures users can't access certain fields
+	 * Sets/adds the data members and ensures users can't access certain fields
 	 */
 	private void setupPanel()
 	{
@@ -144,7 +150,7 @@ public class TarotPanel extends JPanel
 	}
 	
 	/**
-	 * Sets up the layout of the windows
+	 * Sets up the layout of the window and the positions of various objects
 	 */
 	private void setupLayout()
 	{
@@ -163,7 +169,7 @@ public class TarotPanel extends JPanel
 	}
 	
 	/**
-	 * Allows the inputs to go and interact with the controller and such
+	 * Allows various things in the window to interact with the program and do things based on actions
 	 */
 	private void setupListeners()
 	{

@@ -24,15 +24,21 @@ public class TarotController
 	
 	public void start()
 	{
-		//String fileContents = TarotFileReader.readFromFile(this, "TarotCardMeanings.txt");
 		createDeck();
 	}
 	
+	/**
+	 * When an error is triggered, it will display error text to the console 
+	 * @param error - gets an error from the program when needed
+	 */
 	public void handleErrors(Exception error)
 	{
 		display.displayText(error.getMessage());
 	}
 	
+	/**
+	 * Recreates a deck after clearing arrays out by calling multiple methods
+	 */
 	public void createDeck()
 	{
 		myCards.clearOldCards();	//clears out the old deck and CardInfo to create new ones
@@ -42,6 +48,10 @@ public class TarotController
 		myCards.randomSelector();	//Gets the 3rd random card from the deck
 	}
 	
+	/**
+	 * Returns the information gained from the cards
+	 * @return - returns the info from what's been done
+	 */
 	public TarotCards getMyCards()
 	{
 		return myCards;

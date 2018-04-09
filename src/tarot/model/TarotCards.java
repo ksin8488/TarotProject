@@ -20,7 +20,10 @@ public class TarotCards
 	private List<Card> cardInfo;
 	private int drawSize = 3;
 	
-	
+	/**
+	 * Initializes data members and calls methods as needed
+	 * @param appController - appController from the controller is needed
+	 */
 	public TarotCards(TarotController appController)
 	{
 		this.appController = appController;
@@ -37,6 +40,9 @@ public class TarotCards
 	
 	}
 	
+	/**
+	 * Takes the information from the text file and splits it before adding the information into the deck String array
+	 */
 	public void fillDeck()
 	{
 		String fileText = TarotFileReader.readFromFile(appController, "TarotCardMeanings.txt");
@@ -48,7 +54,10 @@ public class TarotCards
 		}
 	}
 	
-	public void randomSelector()	//MAY NOT HAVE A VOID TYPE IN THE FUTURE
+	/**
+	 * Takes the deck and goes through various checks before randomly selecting 3 and breaking up the info for each card and storing them
+	 */
+	public void randomSelector()
 	{
 		boolean lookingForCard = true;
 
@@ -65,7 +74,6 @@ public class TarotCards
 			
 			if(number % 2 == 0 && number < deck.size())	//if the random number is even...
 			{
-				deck.size();
 				cardIndex = number;
 				cardType = deck.get(number);
 				cardDescription = deck.get(number + 1);
@@ -74,21 +82,25 @@ public class TarotCards
 				String cardOrientation = cardFullName[1];
 				cardInfo.add(new Card(number, cardType, cardDescription, cardFullName, cardName, cardOrientation));
 				deck.remove(number);
-				deck.size();
 				deck.remove(number + 1);
-				deck.size();
 				lookingForCard = false;
 			}
 		}
 
 	}
 	
-	//Getter to return the cardInfo array
+	/**
+	 * Getter to return the cardInfo Array that is of type Card from another class file
+	 * @return - The cardInfo Card array is returned
+	 */
 	public List<Card> getCardInfo()
 	{
 		return cardInfo;
 	}
 
+	/**
+	 * Clears out the deck and cardInfo arrays so they have nothing stored in them
+	 */
 	public void clearOldCards()
 	{
 		deck.clear();
