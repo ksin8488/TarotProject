@@ -44,8 +44,17 @@ public class TarotPanel extends JPanel
 		//Initialize GUI data members
 		drawCardsButton = new JButton("Draw Cards");
 		cardOneDescription = new JTextArea(5, 50);	//CAN CHANGE DIMENSIONS
+		cardOneDescription.setBackground(Color.BLACK);	//Sets the background color of the label
+		cardOneDescription.setForeground(Color.WHITE);	//Setting the color of the text in the Label
+		
 		cardTwoDescription = new JTextArea(5, 50);
+		cardTwoDescription.setBackground(Color.BLACK);
+		cardTwoDescription.setForeground(Color.WHITE);
+		
 		cardThreeDescription = new JTextArea(5, 50);
+		cardThreeDescription.setBackground(Color.BLACK);
+		cardThreeDescription.setForeground(Color.WHITE);
+		
 		cardOne = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/ImageNotFound.png")), JLabel.CENTER);
 		cardTwo = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/ImageNotFound.png")), JLabel.CENTER);
 		cardThree = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/ImageNotFound.png")), JLabel.CENTER);
@@ -114,15 +123,15 @@ public class TarotPanel extends JPanel
 	{
 		cardOneDescription.setText(appController.getMyCards().getCardInfo().get(0).getCardName() + 
 				" " + appController.getMyCards().getCardInfo().get(0).getCardOreintation() + 
-				": " + appController.getMyCards().getCardInfo().get(0).getCardDescription());
+				"\n" + appController.getMyCards().getCardInfo().get(0).getCardDescription());
 		
 		cardTwoDescription.setText(appController.getMyCards().getCardInfo().get(1).getCardName() + 
 				" " + appController.getMyCards().getCardInfo().get(1).getCardOreintation() + 
-				": " + appController.getMyCards().getCardInfo().get(1).getCardDescription());
+				"\n" + appController.getMyCards().getCardInfo().get(1).getCardDescription());
 		
 		cardThreeDescription.setText(appController.getMyCards().getCardInfo().get(2).getCardName() + 
 				" " + appController.getMyCards().getCardInfo().get(2).getCardOreintation() + 
-				": " + appController.getMyCards().getCardInfo().get(2).getCardDescription());
+				"\n" + appController.getMyCards().getCardInfo().get(2).getCardDescription());
 	}
 	
 	/**
