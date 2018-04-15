@@ -12,7 +12,6 @@ import javax.swing.ImageIcon;
 import java.util.Random;
 import java.awt.*;
 
-import java.awt.image.BufferedImage;
  
 
 public class TarotCards
@@ -107,24 +106,6 @@ public class TarotCards
 	{
 		deck.clear();
 		cardInfo.clear();
-	}
-
-	public BufferedImage reversedImage(BufferedImage inputImage)
-	{
-		int width = inputImage.getWidth();
-		int height = inputImage.getHeight();
-		
-		BufferedImage reversedImage = new BufferedImage(width, height, inputImage.getType());
-		
-		for(int x = 0; x < width; x++)
-		{
-			for(int y = 0; y < height; y++)
-			{
-				reversedImage.setRGB(width - x - 1, height - y - 1, inputImage.getRGB(x,y));
-			}
-		}
-		
-		return reversedImage;
 	}
  }
 
