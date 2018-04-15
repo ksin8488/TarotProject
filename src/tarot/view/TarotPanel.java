@@ -79,12 +79,9 @@ public class TarotPanel extends JPanel
 		String defaultName = "ImageNotFound";
 		String extension = ".png";
 		ImageIcon cardImage;	//import image icon
-		ImageIcon reversedCardImage;
 		
 		//Card 1
-		String [] fullNameOne =  appController.getMyCards().getCardInfo().get(0).getCardFullName();
 		String nameOne = appController.getMyCards().getCardInfo().get(0).getCardName();
-		
 		try
 		{
 			cardImage = new ImageIcon(getClass().getResource(path + nameOne + extension));
@@ -97,7 +94,6 @@ public class TarotPanel extends JPanel
 		cardOne.setIcon(cardImage);
 		
 		//Card 2
-		String [] fullNameTwo =  appController.getMyCards().getCardInfo().get(1).getCardFullName();
 		String nameTwo = appController.getMyCards().getCardInfo().get(1).getCardName();
 		try
 		{
@@ -111,34 +107,17 @@ public class TarotPanel extends JPanel
 		cardTwo.setIcon(cardImage);
 		
 		//Card 3
-		String [] fullNameThree =  appController.getMyCards().getCardInfo().get(2).getCardFullName();
 		String nameThree = appController.getMyCards().getCardInfo().get(2).getCardName();
-		
-			if(fullNameThree[1].contains("reversed"))
-			{
-				try
-				{
-					reversedCardImage = new ImageIcon(appController.reverseImage());
-				}
-				catch(NullPointerException missingImageFile)
-				{
-					cardImage = new ImageIcon(getClass().getResource(path + defaultName + extension));
-					System.out.println("ERROR. Image File Not Found");
-				}
-			}
-			else
-			{
-				try
-				{
-					cardImage = new ImageIcon(getClass().getResource(path + nameThree + extension));
-				}
-				catch (NullPointerException missingImageFile)
-				{
-					cardImage = new ImageIcon(getClass().getResource(path + defaultName + extension));
-					System.out.println("ERROR. Image File Not Found");
-				}
-				cardThree.setIcon(cardImage);
-			}
+		try
+		{
+			cardImage = new ImageIcon(getClass().getResource(path + nameThree + extension));
+		}
+		catch (NullPointerException missingImageFile)
+		{
+			cardImage = new ImageIcon(getClass().getResource(path + defaultName + extension));
+			System.out.println("ERROR. Image File Not Found");
+		}
+		cardThree.setIcon(cardImage);
 	}
 	
 	/**
