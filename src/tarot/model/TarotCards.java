@@ -65,7 +65,6 @@ public class TarotCards
 			
 			if(number % 2 == 0 && number < deck.size())	//if the random number is even...
 			{
-				deck.size();
 				cardIndex = number;
 				cardType = deck.get(number);
 				cardDescription = deck.get(number + 1);
@@ -74,9 +73,7 @@ public class TarotCards
 				String cardOrientation = cardFullName[1];
 				cardInfo.add(new Card(number, cardType, cardDescription, cardFullName, cardName, cardOrientation));
 				deck.remove(number);
-				deck.size();
 				deck.remove(number + 1);
-				deck.size();
 				lookingForCard = false;
 			}
 		}
