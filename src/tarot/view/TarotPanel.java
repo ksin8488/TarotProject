@@ -114,15 +114,15 @@ public class TarotPanel extends JPanel
 	{
 		cardOneDescription.setText(appController.getMyCards().getCardInfo().get(0).getCardName() + 
 				" " + appController.getMyCards().getCardInfo().get(0).getCardOreintation() + 
-				": " + appController.getMyCards().getCardInfo().get(0).getCardDescription());
+				"\n"+ appController.getMyCards().getCardInfo().get(0).getCardDescription());
 		
 		cardTwoDescription.setText(appController.getMyCards().getCardInfo().get(1).getCardName() + 
 				" " + appController.getMyCards().getCardInfo().get(1).getCardOreintation() + 
-				": " + appController.getMyCards().getCardInfo().get(1).getCardDescription());
+				"\n" + appController.getMyCards().getCardInfo().get(1).getCardDescription());
 		
 		cardThreeDescription.setText(appController.getMyCards().getCardInfo().get(2).getCardName() + 
 				" " + appController.getMyCards().getCardInfo().get(2).getCardOreintation() + 
-				": " + appController.getMyCards().getCardInfo().get(2).getCardDescription());
+				"\n" + appController.getMyCards().getCardInfo().get(2).getCardDescription());
 	}
 	
 	/**
