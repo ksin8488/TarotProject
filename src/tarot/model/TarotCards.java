@@ -12,7 +12,6 @@ import javax.swing.ImageIcon;
 import java.util.Random;
 import java.awt.*;
 
-
  
 
 public class TarotCards
@@ -108,6 +107,6 @@ public class TarotCards
 		deck.clear();
 		cardInfo.clear();
 	}
-
+	
  }
 
