@@ -55,6 +55,8 @@ public class TarotCards
 		}
 	}
 	
+	//startAbstraction
+	//startComplexity
 	/**
 	 * Takes the deck and goes through various checks before randomly selecting 3 and breaking up the info for each card and storing them
 	 */
@@ -89,6 +91,8 @@ public class TarotCards
 		}
 
 	}
+	//endAbstraction
+	//endComplexity
 	
 	/**
 	 * Getter to return the cardInfo Array that is of type Card from another class file
