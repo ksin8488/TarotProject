@@ -15,8 +15,8 @@ import javax.swing.SpringLayout;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.List;
-
 
 public class TarotOneCardSpread extends JPanel
 {
@@ -34,12 +34,15 @@ public class TarotOneCardSpread extends JPanel
 		this.appController = appController;
 		
 		drawCardsButton = new JButton("Draw Cards");
+		menuButton = new JButton("Menu");
 		cardOneDescription = new JTextArea(5, 50);
 		cardOneDescription.setBackground(Color.BLACK);
 		cardOneDescription.setForeground(Color.WHITE);
 		
 		cardOne = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/ImageNotFound.png")), JLabel.CENTER);
 		appLayout = new SpringLayout();
+		appLayout.putConstraint(SpringLayout.NORTH, menuButton, 0, SpringLayout.NORTH, drawCardsButton);
+		appLayout.putConstraint(SpringLayout.WEST, menuButton, 52, SpringLayout.EAST, drawCardsButton);
 		
 		//Method Calls
 		setupPanel();
@@ -83,8 +86,10 @@ public class TarotOneCardSpread extends JPanel
 		this.setBackground(Color.RED);
 		this.setLayout(appLayout);
 		this.add(drawCardsButton);
-		this.add(cardOne);
+		this.add(menuButton);
 		this.add(cardOneDescription);
+		this.add(cardOne);
+		
 		
 		cardOneDescription.setEnabled(false);
 		cardOneDescription.setEditable(false);
@@ -113,13 +118,13 @@ public class TarotOneCardSpread extends JPanel
 			}
 		});
 		
-		menuButton.addActionListener(new ActionListener()	//MAY NOT NEED
-		{
-			@Override
-			public void actionPerformed(ActionEvent click)
-			{
-				
-			}
-		});
+//		menuButton.addActionListener(new ActionListener()	//MAY NOT NEED
+//		{
+//			@Override
+//			public void actionPerformed(ActionEvent click)
+//			{
+//				
+//			}
+//		});
 	}
 }

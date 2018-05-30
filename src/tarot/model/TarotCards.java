@@ -19,7 +19,7 @@ public class TarotCards
 	private TarotController appController;
 	private List<String> deck;
 	private List<Card> cardInfo;
-	private int drawSize = 3;
+	private int drawSize = 4;
 	
 	/**
 	 * Initializes data members and calls methods as needed
