@@ -60,7 +60,7 @@ public class TarotPanel extends JPanel
 		cardThree = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/ImageNotFound.png")), JLabel.CENTER);
 		appLayout = new SpringLayout();
 
-	
+		
 		//Method Calls
 		setupPanel();
 		setupLayout();
@@ -68,7 +68,7 @@ public class TarotPanel extends JPanel
 		updateText();
 		setupListeners();
 	}
-	
+		
 	/**
 	 * Takes the current information from CardInfo and adds them to the various Icons based on which card is which
 	 */

@@ -1,19 +1,16 @@
 package tarot.view;
 
-import javax.swing.SwingUtilities;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 import java.awt.CardLayout;
 import java.awt.Color;
-import javax.swing.JButton;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import tarot.controller.TarotController;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 
-import tarot.view.TarotFrame;
-import tarot.view.TarotPanel;
+import tarot.controller.TarotController;
 
 
 public class TarotCardLayout
@@ -26,16 +23,22 @@ public class TarotCardLayout
 	JButton buttonTwo = new JButton("Switch to 1st panel");
 	JButton buttonThree = new JButton("Switch to 3 set Draw");
 	CardLayout cl = new CardLayout();
+	TarotPanel tp1;
 	
-	public TarotCardLayout()	//constructor for the CardLayout
+	public TarotCardLayout(TarotController appController)	//constructor for the CardLayout
 	{
+		
+		tp1 = new TarotPanel(appController);
+		
 		panelCont.setLayout(cl);
 		
 		panelFirst.add(buttonOne);
+		panelFirst.add(buttonThree);
 		panelSecond.add(buttonTwo);
 		
 		panelCont.add(panelFirst, "1");	//"1" is the identifier
 		panelCont.add(panelSecond, "2");
+		panelCont.add(tp1, "3");
 		cl.show(panelCont, "1");
 		
 		frame.add(panelCont);
@@ -73,15 +76,14 @@ public class TarotCardLayout
 			}
 		});
 		
-	}
-	
-	public static void main(String[] args)	//Force runs this class only for checking how it works
-	{
-		SwingUtilities.invokeLater(new Runnable() {
+		buttonThree.addActionListener(new ActionListener() {
 			@Override
-			public void run() {
-				new TarotCardLayout();
+			public void actionPerformed(ActionEvent click) {
+				cl.show(panelCont, "3");
 			}
 		});
+		
 	}
+	
+	
 }

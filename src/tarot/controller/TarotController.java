@@ -12,6 +12,7 @@ public class TarotController
 	private TarotFrame appFrame;
 	private PopupDisplay display;
 	private TarotCards myCards;
+	private TarotCardLayout layout;
 	
 	/**
 	 * initializes certain values as well as activate them
@@ -20,7 +21,7 @@ public class TarotController
 	{
 		display = new PopupDisplay();
 		myCards = new TarotCards(this);
-		appFrame = new TarotFrame(this);
+		layout = new TarotCardLayout(this);
 	}
 	
 	public void start()
