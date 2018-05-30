@@ -3,6 +3,7 @@ package tarot.controller;
 import tarot.view.TarotFrame;
 import tarot.view.PopupDisplay;
 import tarot.model.TarotCards;
+import tarot.view.TarotCardLayout;
 import java.util.List;
 import java.util.ArrayList;
 
