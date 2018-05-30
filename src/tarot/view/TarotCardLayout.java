@@ -23,12 +23,12 @@ public class TarotCardLayout
 	JButton buttonTwo = new JButton("Switch to 1st panel");
 	JButton buttonThree = new JButton("Switch to 3 set Draw");
 	CardLayout cl = new CardLayout();
-	TarotPanel tp1;
+	TarotPanel threeDrawPanel;
 	
 	public TarotCardLayout(TarotController appController)	//constructor for the CardLayout
 	{
 		
-		tp1 = new TarotPanel(appController);
+		threeDrawPanel = new TarotPanel(appController);
 		
 		panelCont.setLayout(cl);
 		
@@ -38,13 +38,12 @@ public class TarotCardLayout
 		
 		panelCont.add(panelFirst, "1");	//"1" is the identifier
 		panelCont.add(panelSecond, "2");
-		panelCont.add(tp1, "3");
+		panelCont.add(threeDrawPanel, "3");
 		cl.show(panelCont, "1");
 		
 		frame.add(panelCont);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.pack();
-		//frame.setContentPane(appPanel);
 		frame.setResizable(false);
 		frame.setSize(900, 750);	//CAN CHANGE IN THE FUTURE!!!
 		frame.setVisible(true);

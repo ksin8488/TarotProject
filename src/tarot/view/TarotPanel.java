@@ -22,6 +22,7 @@ public class TarotPanel extends JPanel
 {
 	private TarotController appController;
 	private JButton drawCardsButton;
+	private JButton menuButton;
 	private JTextArea cardOneDescription; //Display Tarot Card information
 	private JTextArea cardTwoDescription;
 	private JTextArea cardThreeDescription;
@@ -43,6 +44,7 @@ public class TarotPanel extends JPanel
 		
 		//Initialize GUI data members
 		drawCardsButton = new JButton("Draw Cards");
+		menuButton = new JButton("Menu");
 		cardOneDescription = new JTextArea(5, 50);	//CAN CHANGE DIMENSIONS
 		cardOneDescription.setBackground(Color.BLACK);	//Sets the background color of the label
 		cardOneDescription.setForeground(Color.WHITE);	//Setting the color of the text in the Label
@@ -147,6 +149,7 @@ public class TarotPanel extends JPanel
 		this.setBackground(Color.BLUE);
 		this.setLayout(appLayout);
 		this.add(drawCardsButton);
+		this.add(menuButton);
 		this.add(cardOne);
 		this.add(cardTwo);
 		this.add(cardThree);
@@ -195,6 +198,15 @@ public class TarotPanel extends JPanel
 				appController.createDeck();
 				updateImages();
 				updateText();
+			}
+		});
+		
+		menuButton.addActionListener(new ActionListener()	//MAY NOT NEED
+		{
+			@Override
+			public void actionPerformed(ActionEvent click)
+			{
+				
 			}
 		});
 	}
