@@ -22,6 +22,7 @@ public class TarotCardLayout
 	JButton buttonOne = new JButton("Switch to 2nd panel");
 	JButton buttonTwo = new JButton("Switch to 1st panel");
 	JButton buttonThree = new JButton("Switch to 3 set Draw");
+	JButton threeDrawPanelReturn = new JButton("Menu");
 	CardLayout cl = new CardLayout();
 	TarotPanel threeDrawPanel;
 	
@@ -34,19 +35,22 @@ public class TarotCardLayout
 		
 		panelFirst.add(buttonOne);
 		panelFirst.add(buttonThree);
-		panelSecond.add(buttonTwo);
 		
 		panelCont.add(panelFirst, "1");	//"1" is the identifier
-		panelCont.add(panelSecond, "2");
 		panelCont.add(threeDrawPanel, "3");
 		cl.show(panelCont, "1");
 		
-		frame.add(panelCont);
+		frame.getContentPane().add(panelCont);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.pack();
 		frame.setResizable(false);
 		frame.setSize(900, 750);	//CAN CHANGE IN THE FUTURE!!!
 		frame.setVisible(true);
+		
+		panelFirst.setSize(900, 750);
+		panelSecond.add(buttonTwo);
+		panelCont.add(panelSecond, "2");
+		panelSecond.setSize(900, 750);
 		
 		//Method Calls
 		setupLayout();
@@ -57,6 +61,8 @@ public class TarotCardLayout
 	{
 		panelFirst.setBackground(Color.blue);
 		panelSecond.setBackground(Color.GREEN);
+		//Window Layout
+		
 	}
 	
 	public void setupListeners()

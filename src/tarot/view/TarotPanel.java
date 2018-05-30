@@ -62,7 +62,6 @@ public class TarotPanel extends JPanel
 		cardThree = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/ImageNotFound.png")), JLabel.CENTER);
 		appLayout = new SpringLayout();
 
-		
 		//Method Calls
 		setupPanel();
 		setupLayout();
@@ -179,10 +178,12 @@ public class TarotPanel extends JPanel
 		appLayout.putConstraint(SpringLayout.EAST, cardOneDescription, 0, SpringLayout.EAST, cardTwoDescription);
 		appLayout.putConstraint(SpringLayout.SOUTH, cardTwoDescription, -20, SpringLayout.NORTH, cardThreeDescription);
 		appLayout.putConstraint(SpringLayout.EAST, cardTwoDescription, 0, SpringLayout.EAST, cardThreeDescription);
-		appLayout.putConstraint(SpringLayout.SOUTH, cardThreeDescription, -19, SpringLayout.NORTH, drawCardsButton);
 		appLayout.putConstraint(SpringLayout.EAST, cardThreeDescription, -158, SpringLayout.EAST, this);
-		appLayout.putConstraint(SpringLayout.SOUTH, drawCardsButton, 0, SpringLayout.SOUTH, this);
-		appLayout.putConstraint(SpringLayout.EAST, drawCardsButton, -259, SpringLayout.EAST, this);
+		appLayout.putConstraint(SpringLayout.NORTH, menuButton, 9, SpringLayout.SOUTH, cardThreeDescription);
+		appLayout.putConstraint(SpringLayout.WEST, menuButton, 488, SpringLayout.WEST, this);
+		appLayout.putConstraint(SpringLayout.NORTH, drawCardsButton, 0, SpringLayout.NORTH, menuButton);
+		appLayout.putConstraint(SpringLayout.EAST, drawCardsButton, -43, SpringLayout.WEST, menuButton);
+		appLayout.putConstraint(SpringLayout.SOUTH, cardThreeDescription, -48, SpringLayout.SOUTH, this);
 	}
 	
 	/**

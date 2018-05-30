@@ -51,12 +51,31 @@ public class TarotOneCardSpread extends JPanel
 	
 	private void updateImages()
 	{
+		String path = "/tarot/view/images/";
+		String defaultName = "ImageNotFound";
+		String extension = ".png";
+		ImageIcon cardImage;	//import image icon
 		
+		//Card 1
+		String nameOne = appController.getMyCards().getCardInfo().get(0).getCardName();
+		try
+		{
+			cardImage = new ImageIcon(getClass().getResource(path + nameOne + extension));
+		}
+		catch (NullPointerException missingImageFile)
+		{
+			cardImage = new ImageIcon(getClass().getResource(path + defaultName + extension));
+			System.out.println("ERROR. Image File Not Found");
+		}
+		cardOne.setIcon(cardImage);
 	}
 	
 	private void updateText()
 	{
-		
+		cardOneDescription.setText(appController.getMyCards().getCardInfo().get(0).getCardName() + 
+				" " + appController.getMyCards().getCardInfo().get(0).getCardOreintation() + 
+				"\n"+ appController.getMyCards().getCardInfo().get(0).getCardDescription());
+
 	}
 	
 	private void setupPanel()
@@ -73,7 +92,12 @@ public class TarotOneCardSpread extends JPanel
 	
 	private void setupLayout()
 	{
-		
+		appLayout.putConstraint(SpringLayout.WEST, drawCardsButton, 317, SpringLayout.WEST, this);
+		appLayout.putConstraint(SpringLayout.SOUTH, drawCardsButton, -10, SpringLayout.SOUTH, this);
+		appLayout.putConstraint(SpringLayout.NORTH, cardOne, 256, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.NORTH, cardOneDescription, 6, SpringLayout.SOUTH, cardOne);
+		appLayout.putConstraint(SpringLayout.WEST, cardOneDescription, 144, SpringLayout.WEST, this);
+		appLayout.putConstraint(SpringLayout.WEST, cardOne, 361, SpringLayout.WEST, this);
 	}
 	
 	private void setupListeners()
