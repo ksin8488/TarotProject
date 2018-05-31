@@ -207,7 +207,10 @@ public class TarotPanel extends JPanel
 			@Override
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				TarotCardLayout cardLayoutAccess = new TarotCardLayout(appController);
+				cardLayoutAccess.mainMenu();
+				TarotFrame tarotFrameAccess = new TarotFrame(appController);
+				tarotFrameAccess.closeFrame();
 			}
 		});
 	}

@@ -15,7 +15,7 @@ import tarot.controller.TarotController;
 
 public class TarotCardLayout
 {
-	JFrame frame = new JFrame("CardLayout demo");
+	JFrame frame = new JFrame("Tarot Cards");
 	JPanel panelCont = new JPanel();
 	JPanel panelFirst = new JPanel();
 	JPanel panelSecond = new JPanel();
@@ -78,6 +78,12 @@ public class TarotCardLayout
 		panelSecond.setBackground(Color.GREEN);
 		//Window Layout
 		
+	}
+	
+	public void mainMenu()
+	{
+		frame.getContentPane().removeAll();
+		frame.add(panelCont);
 	}
 	
 	public void setupListeners()

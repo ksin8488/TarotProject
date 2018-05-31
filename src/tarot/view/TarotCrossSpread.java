@@ -23,10 +23,10 @@ public class TarotCrossSpread extends JPanel
 	private TarotController appController;
 	private JButton drawCardsButton;
 	private JButton menuButton;
-//	private JTextArea cardOneDescription;
-//	private JTextArea cardTwoDescription;
-//	private JTextArea cardThreeDescription;
-//	private JTextArea cardFourDescription;
+	private JTextArea cardOneDescription;
+	private JTextArea cardTwoDescription;
+	private JTextArea cardThreeDescription;
+	private JTextArea cardFourDescription;
 	private JLabel cardOne;
 	private JLabel cardTwo;
 	private JLabel cardThree;
@@ -42,27 +42,36 @@ public class TarotCrossSpread extends JPanel
 		drawCardsButton = new JButton("Draw Cards");
 		menuButton = new JButton("Menu");
 		
-//		cardOneDescription = new JTextArea(5, 50);
-//		cardOneDescription.setBackground(Color.BLACK);
-//		cardOneDescription.setForeground(Color.WHITE);
-//		
-//		cardTwoDescription = new JTextArea(5, 50);
-//		cardTwoDescription.setBackground(Color.BLACK);
-//		cardTwoDescription.setForeground(Color.WHITE);
-//		
-//		cardThreeDescription = new JTextArea(5, 50);
-//		cardThreeDescription.setBackground(Color.BLACK);
-//		cardThreeDescription.setForeground(Color.WHITE);
-//		
-//		cardFourDescription = new JTextArea(5, 50);
-//		cardFourDescription.setBackground(Color.BLACK);
-//		cardFourDescription.setForeground(Color.WHITE);
+		cardOneDescription = new JTextArea(3, 25);
+		cardOneDescription.setBackground(Color.DARK_GRAY);
+		cardOneDescription.setForeground(Color.WHITE);
+		
+		cardTwoDescription = new JTextArea(3, 25);
+		cardTwoDescription.setBackground(Color.DARK_GRAY);
+		cardTwoDescription.setForeground(Color.WHITE);
+		
+		cardThreeDescription = new JTextArea(7, 5);
+		cardThreeDescription.setBackground(Color.DARK_GRAY);
+		cardThreeDescription.setForeground(Color.WHITE);
+		
+		cardFourDescription = new JTextArea(7, 5);
+		cardFourDescription.setBackground(Color.DARK_GRAY);
+		cardFourDescription.setForeground(Color.WHITE);
 		
 		cardOne = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/ImageNotFound.png")), JLabel.CENTER);
 		cardTwo = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/ImageNotFound.png")), JLabel.CENTER);
 		cardThree = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/ImageNotFound.png")), JLabel.CENTER);
 		cardFour = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/ImageNotFound.png")), JLabel.CENTER);
 		appLayout = new SpringLayout();
+		appLayout.putConstraint(SpringLayout.EAST, cardOneDescription, -70, SpringLayout.EAST, cardOne);
+		appLayout.putConstraint(SpringLayout.WEST, cardTwoDescription, 70, SpringLayout.WEST, cardTwo);
+		appLayout.putConstraint(SpringLayout.SOUTH, cardTwoDescription, -50, SpringLayout.SOUTH, this);
+		appLayout.putConstraint(SpringLayout.NORTH, cardThreeDescription, 300, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.SOUTH, cardThreeDescription, -300, SpringLayout.SOUTH, this);
+		appLayout.putConstraint(SpringLayout.NORTH, cardFourDescription, 300, SpringLayout.NORTH, this);
+		appLayout.putConstraint(SpringLayout.WEST, cardFourDescription, 0, SpringLayout.WEST, this);
+		appLayout.putConstraint(SpringLayout.SOUTH, cardFourDescription, -300, SpringLayout.SOUTH, this);
+		appLayout.putConstraint(SpringLayout.EAST, cardThreeDescription, 0, SpringLayout.EAST, this);
 		
 		//Method Calls
 		setupPanel();
@@ -134,47 +143,59 @@ public class TarotCrossSpread extends JPanel
 	
 	private void updateText()
 	{
-//		cardOneDescription.setText(appController.getMyCards().getCardInfo().get(0).getCardName() + 
-//				" " + appController.getMyCards().getCardInfo().get(0).getCardOreintation() + 
-//				"\n"+ appController.getMyCards().getCardInfo().get(0).getCardDescription());
-//		
-//		cardTwoDescription.setText(appController.getMyCards().getCardInfo().get(1).getCardName() + 
-//				" " + appController.getMyCards().getCardInfo().get(1).getCardOreintation() + 
-//				"\n" + appController.getMyCards().getCardInfo().get(1).getCardDescription());
-//		
-//		cardThreeDescription.setText(appController.getMyCards().getCardInfo().get(2).getCardName() + 
-//				" " + appController.getMyCards().getCardInfo().get(2).getCardOreintation() + 
-//				"\n" + appController.getMyCards().getCardInfo().get(2).getCardDescription());
-//		
-//		cardFourDescription.setText(appController.getMyCards().getCardInfo().get(3).getCardName() + 
-//				" " + appController.getMyCards().getCardInfo().get(3).getCardOreintation() + 
-//				"\n" + appController.getMyCards().getCardInfo().get(3).getCardDescription());
+		cardOneDescription.setText(appController.getMyCards().getCardInfo().get(0).getCardName() + 
+				" " + appController.getMyCards().getCardInfo().get(0).getCardOreintation() + 
+				"\n"+ appController.getMyCards().getCardInfo().get(0).getCardDescription());
+		
+		cardTwoDescription.setText(appController.getMyCards().getCardInfo().get(1).getCardName() + 
+				" " + appController.getMyCards().getCardInfo().get(1).getCardOreintation() + 
+				"\n" + appController.getMyCards().getCardInfo().get(1).getCardDescription());
+		
+		cardThreeDescription.setText(appController.getMyCards().getCardInfo().get(2).getCardName() + 
+				" " + appController.getMyCards().getCardInfo().get(2).getCardOreintation() + 
+				"\n" + appController.getMyCards().getCardInfo().get(2).getCardDescription());
+		
+		cardFourDescription.setText(appController.getMyCards().getCardInfo().get(3).getCardName() + 
+				" " + appController.getMyCards().getCardInfo().get(3).getCardOreintation() + 
+				"\n" + appController.getMyCards().getCardInfo().get(3).getCardDescription());
 	}
 	
 	private void setupPanel()
 	{
-		this.setBackground(Color.RED);
+		this.setBackground(Color.GRAY);
 		this.setLayout(appLayout);
 		this.add(drawCardsButton);
 		this.add(menuButton);
-//		this.add(cardOneDescription);
-//		this.add(cardTwoDescription);
-//		this.add(cardThreeDescription);
-//		this.add(cardFourDescription);
+		this.add(cardOneDescription);
+		this.add(cardTwoDescription);
+		this.add(cardThreeDescription);
+		this.add(cardFourDescription);
 		this.add(cardOne);
 		this.add(cardTwo);
 		this.add(cardThree);
 		this.add(cardFour);
 		
 		
-//		cardOneDescription.setEnabled(false);
-//		cardOneDescription.setEditable(false);
-//		cardTwoDescription.setEnabled(false);
-//		cardTwoDescription.setEditable(false);
-//		cardThreeDescription.setEnabled(false);
-//		cardThreeDescription.setEditable(false);
-//		cardFourDescription.setEnabled(false);
-//		cardFourDescription.setEditable(false);
+		cardOneDescription.setEnabled(false);
+		cardOneDescription.setEditable(false);
+		cardOneDescription.setLineWrap(true);
+		cardOneDescription.setWrapStyleWord(true);
+		
+		cardTwoDescription.setEnabled(false);
+		cardTwoDescription.setEditable(false);
+		cardTwoDescription.setLineWrap(true);
+		cardTwoDescription.setWrapStyleWord(true);
+		
+		cardThreeDescription.setEnabled(false);
+		cardThreeDescription.setEditable(false);
+		cardThreeDescription.setLineWrap(true);
+		cardThreeDescription.setWrapStyleWord(true);
+		
+		cardFourDescription.setEnabled(false);
+		cardFourDescription.setEditable(false);
+		cardFourDescription.setLineWrap(true);
+		cardFourDescription.setWrapStyleWord(true);
+		
 	}
 	
 	private void setupLayout()

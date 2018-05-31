@@ -26,6 +26,12 @@ public class TarotFrame extends JFrame
 		setupFrame();
 	}
 	
+	public void closeFrame()
+	{
+		this.setVisible(false);
+		this.dispose();
+	}
+	
 	/**
 	 * Constructor sets up the frame and its values/conditions
 	 */
