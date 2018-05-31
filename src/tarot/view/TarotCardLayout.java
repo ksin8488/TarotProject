@@ -18,13 +18,11 @@ public class TarotCardLayout
 	JFrame frame = new JFrame("Tarot Cards");
 	JPanel panelCont = new JPanel();
 	JPanel panelFirst = new JPanel();
-	JPanel panelSecond = new JPanel();
+	//JPanel panelSecond = new JPanel();
 	
-	JButton buttonOne = new JButton("Switch to 2nd panel");
-	JButton buttonTwo = new JButton("Switch to 1st panel");
-	JButton buttonThree = new JButton("3 Card Spread");
-	JButton buttonFour = new JButton("1 Card Spread");
-	JButton buttonFive = new JButton("Cross Spread");
+	JButton TarotPanelButton = new JButton("3 Card Spread");
+	JButton TarotOneCardSpreadButton = new JButton("Single Card Spread");
+	JButton TarotCrossSpreadButton = new JButton("Cross Spread");
 	
 	JButton threeDrawPanelReturn = new JButton("Menu");
 	CardLayout cl = new CardLayout();
@@ -42,18 +40,15 @@ public class TarotCardLayout
 		
 		panelCont.setLayout(cl);
 		
-		panelFirst.add(buttonOne);
-		panelSecond.add(buttonTwo);
-		panelFirst.add(buttonThree);
-		panelFirst.add(buttonFour);
-		panelFirst.add(buttonFive);
+		panelFirst.add(TarotPanelButton);
+		panelFirst.add(TarotOneCardSpreadButton);
+		panelFirst.add(TarotCrossSpreadButton);
 		
 		
 		panelCont.add(panelFirst, "1");	//"1" is the identifier
-		panelCont.add(panelSecond, "2");
-		panelCont.add(threeDrawPanel, "3");
-		panelCont.add(oneDrawPanel, "4");
-		panelCont.add(fourDrawPanel, "5");
+		panelCont.add(threeDrawPanel, "2");
+		panelCont.add(oneDrawPanel, "3");
+		panelCont.add(fourDrawPanel, "4");
 		
 		cl.show(panelCont, "1");
 		
@@ -65,7 +60,6 @@ public class TarotCardLayout
 		frame.setVisible(true);
 		
 		panelFirst.setSize(900, 750);
-		panelSecond.setSize(900, 750);
 		
 		//Method Calls
 		setupLayout();
@@ -74,10 +68,7 @@ public class TarotCardLayout
 	
 	public void setupLayout()
 	{
-		panelFirst.setBackground(Color.BLUE);
-		panelSecond.setBackground(Color.GREEN);
-		//Window Layout
-		
+		panelFirst.setBackground(Color.BLUE);	
 	}
 	
 	public void mainMenu()
@@ -88,38 +79,24 @@ public class TarotCardLayout
 	
 	public void setupListeners()
 	{
-		buttonOne.addActionListener(new ActionListener() {
+		TarotPanelButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent click) {
 				cl.show(panelCont, "2");
 			}
 		});
 		
-		buttonTwo.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent click) {
-				cl.show(panelCont, "1");
-			}
-		});
-		
-		buttonThree.addActionListener(new ActionListener() {
+		TarotOneCardSpreadButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent click) {
 				cl.show(panelCont, "3");
 			}
 		});
 		
-		buttonFour.addActionListener(new ActionListener() {
+		TarotCrossSpreadButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent click) {
 				cl.show(panelCont, "4");
-			}
-		});
-		
-		buttonFive.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent click) {
-				cl.show(panelCont, "5");
 			}
 		});
 		

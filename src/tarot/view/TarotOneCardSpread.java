@@ -118,13 +118,16 @@ public class TarotOneCardSpread extends JPanel
 			}
 		});
 		
-//		menuButton.addActionListener(new ActionListener()	//MAY NOT NEED
-//		{
-//			@Override
-//			public void actionPerformed(ActionEvent click)
-//			{
-//				
-//			}
-//		});
+		menuButton.addActionListener(new ActionListener()	//MAY NOT NEED
+		{
+			@Override
+			public void actionPerformed(ActionEvent click)
+			{
+				TarotCardLayout cardLayoutAccess = new TarotCardLayout(appController);
+				cardLayoutAccess.mainMenu();
+				TarotFrame tarotFrameAccess = new TarotFrame(appController);
+				tarotFrameAccess.closeFrame();
+			}
+		});
 	}
 }

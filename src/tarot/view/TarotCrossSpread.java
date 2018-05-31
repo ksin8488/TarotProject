@@ -63,8 +63,8 @@ public class TarotCrossSpread extends JPanel
 		cardThree = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/ImageNotFound.png")), JLabel.CENTER);
 		cardFour = new JLabel("", new ImageIcon(getClass().getResource("/tarot/view/images/ImageNotFound.png")), JLabel.CENTER);
 		appLayout = new SpringLayout();
-		appLayout.putConstraint(SpringLayout.EAST, cardOneDescription, -70, SpringLayout.EAST, cardOne);
-		appLayout.putConstraint(SpringLayout.WEST, cardTwoDescription, 70, SpringLayout.WEST, cardTwo);
+		appLayout.putConstraint(SpringLayout.EAST, cardOneDescription, -50, SpringLayout.EAST, cardOne);
+		appLayout.putConstraint(SpringLayout.WEST, cardTwoDescription, 55, SpringLayout.WEST, cardTwo);
 		appLayout.putConstraint(SpringLayout.SOUTH, cardTwoDescription, -50, SpringLayout.SOUTH, this);
 		appLayout.putConstraint(SpringLayout.NORTH, cardThreeDescription, 300, SpringLayout.NORTH, this);
 		appLayout.putConstraint(SpringLayout.SOUTH, cardThreeDescription, -300, SpringLayout.SOUTH, this);
@@ -230,13 +230,16 @@ public class TarotCrossSpread extends JPanel
 			}
 		});
 		
-//		menuButton.addActionListener(new ActionListener()	//MAY NOT NEED
-//		{
-//			@Override
-//			public void actionPerformed(ActionEvent click)
-//			{
-//				
-//			}
-//		});
+		menuButton.addActionListener(new ActionListener()	//MAY NOT NEED
+		{
+			@Override
+			public void actionPerformed(ActionEvent click)
+			{
+				TarotCardLayout cardLayoutAccess = new TarotCardLayout(appController);
+				cardLayoutAccess.mainMenu();
+				TarotFrame tarotFrameAccess = new TarotFrame(appController);
+				tarotFrameAccess.closeFrame();
+			}
+		});
 	}
 }
