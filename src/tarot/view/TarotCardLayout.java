@@ -23,32 +23,38 @@ public class TarotCardLayout
 	JButton TarotPanelButton = new JButton("3 Card Spread");
 	JButton TarotOneCardSpreadButton = new JButton("Single Card Spread");
 	JButton TarotCrossSpreadButton = new JButton("Cross Spread");
+	JButton TarotFourCardSpreadButton = new JButton("Four Card Spread");
 	
 	JButton threeDrawPanelReturn = new JButton("Menu");
 	CardLayout cl = new CardLayout();
 	
 	TarotPanel threeDrawPanel;
 	TarotOneCardSpread oneDrawPanel;
-	TarotCrossSpread fourDrawPanel;
+	TarotCrossSpread crossDrawPanel;
+	TarotFourCardSpread fourDrawPanel;
 	
 	public TarotCardLayout(TarotController appController)	//constructor for the CardLayout
 	{
 		
 		threeDrawPanel = new TarotPanel(appController);
 		oneDrawPanel = new TarotOneCardSpread(appController);
-		fourDrawPanel = new TarotCrossSpread(appController);
+		crossDrawPanel = new TarotCrossSpread(appController);
+		fourDrawPanel = new TarotFourCardSpread(appController);
 		
 		panelCont.setLayout(cl);
 		
 		panelFirst.add(TarotPanelButton);
 		panelFirst.add(TarotOneCardSpreadButton);
 		panelFirst.add(TarotCrossSpreadButton);
+		panelFirst.add(TarotFourCardSpreadButton);
 		
 		
 		panelCont.add(panelFirst, "1");	//"1" is the identifier
 		panelCont.add(threeDrawPanel, "2");
 		panelCont.add(oneDrawPanel, "3");
-		panelCont.add(fourDrawPanel, "4");
+		panelCont.add(crossDrawPanel, "4");
+		panelCont.add(fourDrawPanel, "5");
+		
 		
 		cl.show(panelCont, "1");
 		
@@ -100,6 +106,12 @@ public class TarotCardLayout
 			}
 		});
 		
+		TarotFourCardSpreadButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent click) {
+				cl.show(panelCont, "5");
+			}
+		});
 	}
 	
 	
